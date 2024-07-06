@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || '7_7_3aba_ef38_1226').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -61,7 +61,7 @@ module.exports = {
   MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
   APPROVE: (process.env.APPROVE || '').trim(),
   ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
-  PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'null',
+  PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'I am Silva m',
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
     : false,
